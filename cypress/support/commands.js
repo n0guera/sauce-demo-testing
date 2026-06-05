@@ -44,3 +44,8 @@ Cypress.Commands.add("confirmarPedido", () => {
   cy.get('[data-test="finish"]').click();
   cy.get(".complete-header").should("have.text", "Thank you for your order!");
 });
+
+Cypress.Commands.add("agregarBackpackAlCarrito", () => {
+  cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
+  cy.get('[data-test="shopping-cart-link"]').click();
+});
